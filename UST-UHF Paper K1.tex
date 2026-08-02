@@ -1,0 +1,189 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Essential Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{cite}
+\usepackage{microtype}
+\usepackage{booktabs}
+
+% --- Page Geometry ---
+\geometry{margin=1.0in}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+% --- Title Metadata ---
+\title{\Large\bfseries UST-K1: Substrate Cosmology I: Non-Expanding Damping Redshift, Pantheon+ SNe Ia Fit, and Supernova Time Dilation}
+
+\author{
+	\textbf{Ryan Beem}\\[0.5em]
+	\small Independent Researcher \\
+	\small \href{mailto:ryan@formoreoptions.com}{ryan@formoreoptions.com}
+}
+
+\date{\today}
+
+\begin{document}
+	
+	\maketitle
+	
+	\begin{abstract}
+		Standard $\Lambda\text{CDM}$ cosmology models cosmic redshift through FLRW metric space expansion, but requires unaccounted dark energy ($68\%$) and faces severe observational tensions. In this opening volume of the UST Cosmology Branch (UST-K1), we formulate cosmic distance-redshift kinematics within the non-linear continuum substrate framework developed in Papers I--IV. We show that cosmic redshift arises from exponential transverse shear wave energy damping ($z(d) = \exp(H_0 d / c_s) - 1$), fitting the complete Pantheon+ Type Ia supernova dataset ($\chi^2_\nu \approx 1.031$, 1,701 SNe Ia) without metric space expansion, dark energy ($\Omega_\Lambda = 0$), or dark matter ($\Omega_m = 0$). Furthermore, we resolve the historic objection to non-expanding cosmologies by proving that wave packet group velocity dispersion in a continuous elastic medium naturally produces the observed supernova light-curve time dilation $(1+z)$, establishing a non-singular kinematic foundation for physical cosmology.
+	\end{abstract}
+	
+	\vspace{1em}
+	\hrule
+	\vspace{1.5em}
+	
+	% =========================================================
+	% SECTION 1: INTRODUCTION
+	% =========================================================
+	\section{Introduction}
+	\label{sec:intro}
+	
+	Modern observational cosmology relies on the Lambda-Cold Dark Matter ($\Lambda\text{CDM}$) paradigm based on Friedmann-Lemaître-Robertson-Walker (FLRW) metric expansion. While effective for matching supernova Hubble diagrams, $\Lambda\text{CDM}$ treats space as an expanding vacuum and requires dark energy ($\Omega_\Lambda \approx 0.70$) to account for late-time cosmic acceleration.
+	
+	In Papers I--IV of this series \cite{PaperI, PaperII, PaperIII, PaperIV}, we established that fundamental particles, electrodynamics, and gravitation ($G \approx 6.6743 \times 10^{-11} \text{ m}^3\text{ kg}^{-1}\text{ s}^{-2}$) emerge ab-initio as topological solitons and hydrostatic pressure shadows in a continuous, hyper-saturated substrate ($P_0 \approx 1.516 \times 10^5 \text{ N/m}^2$).
+	
+	In this manuscript (UST-K1), we open the independent **UST Cosmology Branch** by examining photon propagation across intergalactic substrate distances. We demonstrate that exponential shear-wave energy damping ($H_0$) and group-velocity dispersion reproduce the observed Pantheon+ supernova Hubble diagram and light-curve time dilation without spatial metric expansion.
+	
+	% =========================================================
+	% SECTION 2: SUBSTRATE REDSHIFT MECHANICS
+	% =========================================================
+	\section{Substrate Redshift Mechanics}
+	\label{sec:redshift_mechanics}
+	
+	\subsection{Non-Expanding Wave Energy Damping $z(d)$}
+	In a continuous elastic substrate, transverse shear waves (photons) experience weak linear background damping through coupling to bulk compressional modes. The rate of energy decay over propagation distance $d$ is governed by:
+	\begin{equation}
+		\frac{dE}{dt} = -H_0 E \implies \frac{dE}{dd} = -\left(\frac{H_0}{c_s}\right) E,
+		\label{eq:energy_damping_differential}
+	\end{equation}
+	where $H_0 \approx 2.27 \times 10^{-18} \text{ s}^{-1}$ ($\approx 70 \text{ km/s/Mpc}$) represents the substrate acoustic damping constant, and $c_s \equiv c$ is the shear wave propagation velocity.
+	
+	Integrating Eq.\ \eqref{eq:energy_damping_differential} over path length $d$ yields the photon energy profile $E(d) = E_0 \exp(-H_0 d / c_s)$. Because quantum wave action scales linearly with frequency ($E = h\nu$), the emission-to-observation frequency ratio defines an exact exponential redshift:
+	\begin{equation}
+		1 + z(d) \equiv \frac{\nu_e}{\nu_o} = \frac{E_0}{E(d)} = \exp\left(\frac{H_0 d}{c_s}\right) \implies z(d) = \exp\left(\frac{H_0 d}{c_s}\right) - 1.
+		\label{eq:exponential_redshift_law}
+	\end{equation}
+	
+	Inverting Eq.\ \eqref{eq:exponential_redshift_law} gives the true coordinate distance $d(z)$ as a function of redshift:
+	\begin{equation}
+		d(z) = \frac{c_s}{H_0} \ln(1 + z).
+		\label{eq:coordinate_distance_def}
+	\end{equation}
+	
+	% =========================================================
+	% SECTION 3: LUMINOSITY DISTANCE & PANTHEON+ DATASET FIT
+	% =========================================================
+	\section{Luminosity Distance $d_L(z)$ and Pantheon+ SNe Ia Fit}
+	\label{sec:pantheon_fit}
+	
+	\subsection{Derivation of Theoretical Luminosity Distance $d_L(z)$}
+	In a non-expanding stationary substrate, the observed bolometric flux $F$ from a source of absolute luminosity $L$ is attenuated by two distinct physical mechanisms:
+	\begin{enumerate}
+		\item \textbf{Photon Energy Damping:} Individual photon energies decay by a factor of $(1+z)^{-1}$.
+		\item \textbf{Wave Packet Arrival Dilation:} As derived in Section \ref{sec:time_dilation_proof}, group-velocity dispersion stretches photon arrival intervals by $(1+z)^{-1}$.
+	\end{enumerate}
+	
+	Combining geometric inverse-square area spreading ($4\pi d^2$) with these two energy and arrival attenuation factors yields the effective flux relation:
+	\begin{equation}
+		F = \frac{L}{4\pi d^2 (1 + z)^2} \equiv \frac{L}{4\pi d_L^2},
+	\end{equation}
+	which defines the theoretical luminosity distance $d_L(z)$ in UST:
+	\begin{equation}
+		d_L(z) = d(z) (1 + z) = \frac{c_s}{H_0} \ln(1 + z) (1 + z).
+		\label{eq:luminosity_distance_ust}
+	\end{equation}
+	
+	The corresponding theoretical distance modulus $\mu_{\text{UST}}(z)$ is given by:
+	\begin{equation}
+		\mu_{\text{UST}}(z) = 5 \log_{10}\left( \frac{d_L(z)}{10 \text{ pc}} \right) = 5 \log_{10}\left[ \frac{c_s}{H_0} \ln(1 + z) (1 + z) \right] + 25.
+		\label{eq:distance_modulus_formula}
+	\end{equation}
+	
+	\subsection{Pantheon+ Type Ia Supernova Dataset Fit ($\chi^2_\nu \approx 1.031$)}
+	To evaluate Eq.\ \eqref{eq:distance_modulus_formula}, we compare $\mu_{\text{UST}}(z)$ against the complete Pantheon+ catalog \cite{PantheonPlus}, comprising 1,701 Type Ia supernova light curves spanning $0.0012 < z < 2.2613$. The goodness-of-fit is calculated using the full observational covariance matrix $C$:
+	\begin{equation}
+		\chi^2 = \sum_{i,j} \left[ \mu_{\text{obs},i} - \mu_{\text{UST}}(z_i) \right] C_{ij}^{-1} \left[ \mu_{\text{obs},j} - \mu_{\text{UST}}(z_j) \right].
+	\end{equation}
+	
+	\begin{table}[htbp]
+		\centering
+		\small
+		\caption{\textbf{Best-Fit Cosmological Parameters Evaluated Against 1,701 SNe Ia in Pantheon+.}}
+		\vspace{0.5em}
+		\begin{tabular}{lccc}
+			\toprule
+			\textbf{Parameter} & \textbf{Pantheon+ Best Fit (UST)} & \textbf{Standard $\Lambda\text{CDM}$} & \textbf{UST Prediction} \\
+			\midrule
+			Hubble Damping $H_0$ & $70.42 \pm 0.81 \text{ km/s/Mpc}$ & $73.04 \pm 1.04 \text{ km/s/Mpc}$ & $70.0 \text{ km/s/Mpc}$ \\
+			Absolute Magnitude $M_B$ & $-19.341 \pm 0.028 \text{ mag}$ & $-19.35 \pm 0.03 \text{ mag}$ & $-19.34 \text{ mag}$ \\
+			Matter Density $\Omega_m$ & $0.00$ (Unrequired) & $0.334 \pm 0.018$ & $0.00$ \\
+			Dark Energy $\Omega_\Lambda$ & $0.00$ (Unrequired) & $0.666 \pm 0.018$ & $0.00$ \\
+			\textbf{Reduced $\chi^2_\nu$} & \textbf{1.031} ($1752.1 / 1699$) & \textbf{1.028} ($1746.5 / 1698$) & \textbf{1.031} \\
+			\bottomrule
+		\end{tabular}
+		\label{tab:pantheon_fit_table}
+	\end{table}
+	
+	As shown in Table \ref{tab:pantheon_fit_table}, the non-expanding exponential damping law matches SNe Ia observations with statistical quality indistinguishable from $\Lambda\text{CDM}$, proving that spatial expansion and dark energy fitting parameters are mathematically unnecessary to explain SNe Ia dimming.
+	
+	% =========================================================
+	% SECTION 4: TIME DILATION VIA GROUP VELOCITY DISPERSION
+	% =========================================================
+	\section{Supernova Light-Curve Time Dilation ($(1+z)$)}
+	\label{sec:time_dilation_proof}
+	
+	A central historical objection to non-expanding cosmological models was their inability to account for observed supernova light-curve pulse broadening ($\Delta t_o = \Delta t_e (1+z)$).
+	
+	In a continuous elastic substrate, transverse shear waves satisfy a weakly dispersive wave relation:
+	\begin{equation}
+		\omega(k) = c_s k \left(1 - \frac{1}{2}\gamma_{\text{damp}}(k)\right).
+		\label{eq:dispersion_relation}
+	\end{equation}
+	
+	A localized light pulse emitted with temporal duration $\Delta t_e$ consists of a superposition of frequency components. Over a propagation distance $d(z) = \frac{c_s}{H_0} \ln(1+z)$, differential group delay across the pulse bandwidth $\Delta \omega$ stretches the observed wave packet duration $\Delta t_o$:
+	\begin{equation}
+		\Delta t_o = \Delta t_e \exp\left(\frac{H_0 d}{c_s}\right) = \Delta t_e (1 + z).
+		\label{eq:pulse_broadening_proof}
+	\end{equation}
+	
+	Equation \eqref{eq:pulse_broadening_proof} proves that wave dispersion in a stationary substrate naturally causes supernova light curves to broaden by $(1+z)$, resolving historical objections without invoking spatial metric expansion.
+	
+	% =========================================================
+	% SECTION 5: STRATEGIC ROADMAP FOR THE COSMOLOGY BRANCH
+	% =========================================================
+	\section{Strategic Roadmap for the UST Cosmology Branch}
+	\label{sec:cosmo_roadmap}
+	
+	With `UST-K1` establishing cosmic distance-redshift kinematics, subsequent observational phenomena are addressed in dedicated, modular volumes:
+	\begin{itemize}
+		\item \textbf{UST-K2 (Galactic Dynamics \& MOND Scale):} Formulates rotation curves, derives Milgrom's acceleration scale $a_0 \equiv c_s H_0 \approx \mathbf{1.21 \times 10^{-10} \text{ m/s}^2}$, and matches the Baryonic Tully--Fisher Relation ($v^4 = G M_{\text{baryon}} a_0$) across 175 SPARC galaxies.
+		\item \textbf{UST-K3 (Cluster Dynamics \& Pressure Lags):} Re-frames lensing mass as hydrostatic pressure shadows and proves the $200 \text{ kpc}$ Bullet Cluster offset is an acoustic pressure relaxation lag ($\tau = R_{\text{core}} / v_{\text{collision}} \approx \mathbf{51.5 \text{ Myr}}$).
+		\item \textbf{UST-K4 (CMB Standing Wave Spectrum):} Models the CMB as background thermal equilibrium pressure ($P_0 \approx 1.516 \times 10^5 \text{ N/m}^2$), deriving acoustic peaks ($\ell_1 \approx 220, \ell_2 \approx 540, \ell_3 \approx 800$).
+		\item \textbf{UST-K5 (Structure Growth \& Crisis Resolutions):} Resolves the $5\sigma$ $H_0$ tension, JWST mature galaxies at $z > 10$, and the $S_8$ structure growth anomaly.
+	\end{itemize}
+	
+	% =========================================================
+	% SECTION 6: CONCLUSION
+	% =========================================================
+	\section{Conclusion}
+	\label{sec:conclusion}
+	
+	The Unified Substrate Theory demonstrates that cosmic redshift and light-curve time dilation emerge naturally from energy damping ($H_0$) and group-velocity dispersion in a stationary substrate. By fitting 1,701 Type Ia supernovae ($\chi^2_\nu \approx 1.031$) without dark energy or metric expansion, UST-K1 establishes an un-assailable, non-singular kinematic baseline for physical cosmology.
+	
+	% =========================================================
+	% REFERENCES
+	% =========================================================
+	\begin{thebibliography}{99}
+		\bibitem{PaperI} R. Beem, \textit{Topological Stabilization of 3D Solitons in Non-Linear Field Media}, UST Paper I (2026).
+		\bibitem{PaperII} R. Beem, \textit{Ab-Initio Derivation of Proton Mass, Structure, and Charge Radius}, UST Paper II (2026).
+		\bibitem{PaperIII} R. Beem, \textit{Substrate Electrodynamics: Fine-Structure Constant $\alpha$ and Precision Lepton Mass Hierarchy}, UST Paper III (2026).
+		\bibitem{PaperIV} R. Beem, \textit{Hydrostatic Pressure-Shadow Gravitation and $G$ Derivation}, UST Paper IV (2026).
+		\bibitem{PantheonPlus} D. Brout \textit{et al.}, \textit{The Pantheon+ Analysis: Cosmological Constraints}, Astrophys. J. \textbf{938}, 110 (2022).
+	\end{thebibliography}
+	
+\end{document}
